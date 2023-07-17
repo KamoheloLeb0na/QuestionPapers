@@ -182,9 +182,9 @@ export default function Home () {
                 <p>If You have any questions or needs assistance with using my website or downloading the past papers, <br />please get in touch via the contact details below:</p>
                 <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
                 <Grid container spacing={3} marginTop={"10px"}>
-                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/lgcse4" style={{width:"100%",textDecoration:"none",color:'green'}}><WhatsApp/>+266 5610 7295</Link> </div></Grid>
+                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="https://wa.link/mfwyml" style={{width:"100%",textDecoration:"none",color:'green'}}><WhatsApp/>+266 5610 7295</Link> </div></Grid>
                 
-                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/lgcse4" style={{width:"100%",textDecoration:"none",color:'blue'}}><LinkedIn/>Kamohelo Lebona</Link> </div></Grid>
+                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="www.linkedin.com/in/kamohelo-lebona-1133b6262" style={{width:"100%",textDecoration:"none",color:'blue'}}><LinkedIn/>Kamohelo Lebona</Link> </div></Grid>
                 </Grid>
                 </div>
             </div>
