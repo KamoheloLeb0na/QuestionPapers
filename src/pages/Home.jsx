@@ -4,6 +4,7 @@ import two from "../components/pictures/two.png"
 
 import three from "../components/pictures/three.png"
 import four from "../components/pictures/four.png"
+import { Link } from "react-router-dom"
 import { WhatsApp , LinkedIn , Facebook , Email, Phone,} from "@mui/icons-material"
 import ResponsiveAppBar from "../components/Header"
 
@@ -20,10 +21,18 @@ export default function Home () {
                 <Typography>Welcome to my website, where you can easily download previous year's LGCSE extended math papers.</Typography>
                 <Typography>With my collection of papers, You can prepare for your exams effectively. My website has a simple layout that helps you navigate through the papers effortlessly </Typography>
                 <Typography>Start downloading now!!!</Typography>
+
+                <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"5%"}}>
+                    
+                    <Link to="/questionpapermenu" style={{textDecoration:"none",color:"blue"}}>
+                    <Button variant="outline" sx={{border:"solid",borderWidth:"2px",borderRadius:"10px",borderColor:"blue"}}>Download Now !!</Button>
+                    </Link>
+                </div>
                 
             </div>
 
             <div>
+                <h2>Revise More Effectively</h2>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6">1. Plan Your Study Time</Typography>
@@ -160,64 +169,24 @@ export default function Home () {
                 <h2>
                     Start Your LGCSE Journey Now!!
                 </h2>
-                <Button>Download Papers</Button>
+                <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"5%"}}>
+                    
+                    <Link to="/questionpapermenu" style={{textDecoration:"none",color:"blue"}}>
+                    <Button variant="outline" sx={{border:"solid",borderWidth:"2px",borderRadius:"10px",borderColor:"blue"}}>Download Now !!</Button>
+                    </Link>
+                </div>
             </div>
 
             <div style={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center" ,padding:"10px"}}>
                 <h2>Contact Information</h2>
                 <p>If You have any questions or needs assistance with using my website or downloading the past papers, <br />please get in touch via the contact details below:</p>
-
+                <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
                 <Grid container spacing={3} marginTop={"10px"}>
-
-                    <div style={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-                    <Grid item xs={12} sm={6}>
-                    <a href="#" style={{textDecoration:"none",color:'green'}}>
-                        <WhatsApp/>
-                        
-                        +266 5610 7295
-                    </a>
-                    </Grid>
-                    </div>
-
-                    <div style={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-                    <Grid item xs={12} sm={6}>
-                    <a style={{color:"blue"}}>
-                        <Phone/>
-                        
-                        +266 5610 7295
-                    </a>
-                    </Grid>
-                    </div>
-
-                    <div style={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-                    <Grid item xs={12} sm={6}>
-                    <a style={{color:"blue"}}>
-                        <LinkedIn/>
-                        Kamohelo Lebona
-                    </a>
-                    </Grid>
-                    </div>
-
-                    <div style={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-                    <Grid item xs={12} sm={6}>
-                    <a style={{color:"blue"}}>
-                        <Facebook/>
-                       
-                        Kamohelo Lebona
-                    </a>
-                    </Grid>
-                    </div>
-                    
-                    <div style={{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-                    <Grid item xs={12} sm={6}>
-                    <a style={{color:"maroon"}}>
-                        <Email/>
-                        
-                        kamohelolebna@gmail.com
-                    </a>
-                    </Grid>
-                    </div>
+                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/lgcse4" style={{width:"100%",textDecoration:"none",color:'green'}}><WhatsApp/>+266 5610 7295</Link> </div></Grid>
+                
+                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/lgcse4" style={{width:"100%",textDecoration:"none",color:'blue'}}><LinkedIn/>Kamohelo Lebona</Link> </div></Grid>
                 </Grid>
+                </div>
             </div>
             
         </div>

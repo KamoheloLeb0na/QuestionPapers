@@ -9,12 +9,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Person } from '@mui/icons-material';
 
-const pages = ['LGCSE', 'Save My Exams', 'About'];
 const settings = ['Profile',  'Logout'];
 
 function ResponsiveAppBar() {
@@ -36,7 +36,7 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="sticky" sx={{width:"100%"}}>
+    <AppBar position="sticky" sx={{backgroundColor:"transparent",color:"black"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -87,11 +87,30 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+
+              <MenuItem  onClick={handleCloseNavMenu}>
+              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/" style={{textDecoration:"none",color:"black"}}>Home</a> </Button>
+              </MenuItem>
+
+              <MenuItem  onClick={handleCloseNavMenu}>
+              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/lgcse2" style={{textDecoration:"none",color:"black",}}>LGCSE 2</a> </Button>
+              </MenuItem>
+
+              <MenuItem  onClick={handleCloseNavMenu}>
+              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/lgcse4" style={{textDecoration:"none",color:"black",}}>LGCSE 4</a> </Button>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu}>
+              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/lgcse" style={{textDecoration:"none",color:"black"}}>Notes</a> </Button>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu}>
+              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/" style={{textDecoration:"none",color:"black"}}>SaveMyExams 2</a> </Button>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu}>
+              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/" style={{textDecoration:"none",color:"black"}}>SaveMyExams 4</a> </Button>
+              </MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -114,15 +133,30 @@ function ResponsiveAppBar() {
             Math
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
+          <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
               >
-                {page}
+                Paper 2
               </Button>
-            ))}
+          <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
+              >
+                Paper 4
+              </Button>
+          <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
+              >
+                Paper 2(SaveMyExams)
+              </Button>
+          <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
+              >
+                Paper 4(SaveMyExams)
+              </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
