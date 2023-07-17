@@ -184,7 +184,7 @@ export default function Home () {
                 <Grid container spacing={3} marginTop={"10px"}>
                     <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="https://wa.link/mfwyml" style={{width:"100%",textDecoration:"none",color:'green'}}><WhatsApp/>+266 5610 7295</Link> </div></Grid>
                 
-                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="www.linkedin.com/in/kamohelo-lebona-1133b6262" style={{width:"100%",textDecoration:"none",color:'blue'}}><LinkedIn/>Kamohelo Lebona</Link> </div></Grid>
+                    <Grid item xs={6} ><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="https://www.linkedin.com/in/kamohelo-lebona-1133b6262/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B6ZTuVp7bSo2j37sME1CMNg%3D%3D" style={{width:"100%",textDecoration:"none",color:'blue'}}><LinkedIn/>Kamohelo Lebona</Link> </div></Grid>
                 </Grid>
                 </div>
             </div>
