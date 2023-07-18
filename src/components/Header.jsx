@@ -88,29 +88,25 @@ function ResponsiveAppBar() {
               }}
             >
 
-              <MenuItem  onClick={handleCloseNavMenu}>
-              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/" style={{textDecoration:"none",color:"black"}}>Home</a> </Button>
-              </MenuItem>
+              <a href="/" style={{textDecoration:"none"}}>
+                <MenuItem>
+                  Home
+                </MenuItem>
+              </a>
 
-              <MenuItem  onClick={handleCloseNavMenu}>
-              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/lgcse2" style={{textDecoration:"none",color:"black",}}>LGCSE 2</a> </Button>
-              </MenuItem>
+              <a href="/questionpapermenu" style={{textDecoration:"none"}}>
+                <MenuItem>
+                  Downloads
+                </MenuItem>
+              </a>
 
-              <MenuItem  onClick={handleCloseNavMenu}>
-              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/lgcse4" style={{textDecoration:"none",color:"black",}}>LGCSE 4</a> </Button>
-              </MenuItem>
+              <a href="/about" style={{textDecoration:"none"}}>
+                <MenuItem>
+                  Developer
+                </MenuItem>
+              </a>
 
-              <MenuItem onClick={handleCloseNavMenu}>
-              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/lgcse" style={{textDecoration:"none",color:"black"}}>Notes</a> </Button>
-              </MenuItem>
 
-              <MenuItem onClick={handleCloseNavMenu}>
-              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/" style={{textDecoration:"none",color:"black"}}>SaveMyExams 2</a> </Button>
-              </MenuItem>
-
-              <MenuItem onClick={handleCloseNavMenu}>
-              <Button sx={{width:"100%",justifyContent:"start"}}> <a href="/" style={{textDecoration:"none",color:"black"}}>SaveMyExams 4</a> </Button>
-              </MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -133,62 +129,33 @@ function ResponsiveAppBar() {
             Math
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <a href="/" style={{textDecoration:"none"}}>
+                <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, display: 'block' ,color:"black"}}
+              >
+                Home
+              </Button>
+            </a>
+
+          <a href="/questionpapermenu" style={{textDecoration:"none"}}>
+          <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, display: 'block' ,color:"black"}}
+              >
+                Downloads
+              </Button>
+          </a>
           <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
               >
-                Paper 2
+                Developer
               </Button>
-          <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
-              >
-                Paper 4
-              </Button>
-          <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
-              >
-                Paper 2(SaveMyExams)
-              </Button>
-          <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' ,color:"black"}}
-              >
-                Paper 4(SaveMyExams)
-              </Button>
+
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar src={Person} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
+          </Toolbar>
       </Container>
     </AppBar>
   );
