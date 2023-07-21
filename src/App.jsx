@@ -5,7 +5,7 @@ import Notes from "./pages/Notes"
 import Home from "./pages/Home"
 import LGCSE2 from "./pages/LGCSE2"
 import LGCSE4 from "./pages/LGCSE4"
-import Test from "./pages/Test"
+
 import IGCSE from "./pages/IGCSE"
 
 import SaveExamsDisplayPaper2 from "./pages/SaveExams2"
@@ -32,7 +32,6 @@ export default function App(){
           <Route element={<IGCSE/>} path="igcsetopical"/>
           <Route element={<LGCSE4/>} path="/lgcse4"/>
           <Route element={<Notes/>} path="/notes"/>
-          <Route element={<Test/>} path="/test"/>
         </Routes>
       </BrowserRouter>
       </div>
