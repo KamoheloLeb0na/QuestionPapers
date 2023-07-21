@@ -2,6 +2,7 @@ import {Card , CardContent , Grid , Typography , Button , CardMedia} from "@mui/
 import data from "../data/saveexams4"
 import Download from "../pages/Download"
 import { useState } from "react"
+import face from "./pictures/savemyexamsface.png"
 
 export default function SaveExamsPaper4MS (props) 
 {
@@ -32,10 +33,10 @@ export default function SaveExamsPaper4MS (props)
         (data) => {
             return (
                 <Grid item xs={6} sm={4} md={3} lg={2} height={"100%"}>
-                <Card onClick={() => showPaperDetails(data.title,data.markingScheme)} sx={{ borderRadius: '10px'}}>
+                <Card onClick={() => showPaperDetails(data.title,data.markingScheme)} sx={{ borderRadius: '10px',height:"150px"}}>
                     <CardMedia sx={{  position: 'relative' }}>
                         <div style={{display:"flex",justifyContent:'center',alignItems:"center",}}>
-                            <iframe src={data.markingScheme} frameborder="0"></iframe>
+                            <img src={face} alt={data.markingScheme} />
                         </div>
                     </CardMedia>
                     <CardContent sx={{height:"60px"}}>
@@ -47,7 +48,7 @@ export default function SaveExamsPaper4MS (props)
         }
     )
     return(
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
             {
                 paper.shown ? <Download title={paper.title} file={paper.ms} onClick={() => closePaperDetails()}/> : card
             }

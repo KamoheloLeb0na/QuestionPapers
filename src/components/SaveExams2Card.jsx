@@ -2,7 +2,7 @@ import {Card , CardContent , Grid , Typography , Button , CardMedia} from "@mui/
 import data from "../data/saveexams2"
 import Download from "../pages/Download"
 import { useState } from "react"
-
+import face from "./pictures/savemyexamsface.png"
 export default function SaveExamsPaper2 (props) 
 {
     const[paper , showPaper] = useState({
@@ -32,14 +32,14 @@ export default function SaveExamsPaper2 (props)
         (data) => {
             return (
                 <Grid item xs={6} sm={4} md={3} lg={2}>
-                <Card onClick={() => showPaperDetails(data.title,data.questionPaper)} sx={{ borderRadius: '10px', maxWidth:"100%"}}>
+                <Card onClick={() => showPaperDetails(data.title,data.questionPaper)} sx={{ borderRadius: '10px', maxWidth:"100%",height:"150px"}}>
                     <CardMedia sx={{  position: 'relative' }}>
                         <div style={{display:"flex",justifyContent:'center',alignItems:"center"}}>
-                            <iframe src={data.questionPaper} frameborder="0"></iframe>
+                            <img src={face} alt={data.questionPaper} />
                         </div>
                     </CardMedia>
                     <CardContent>
-                        <p>{data.title}</p>
+                        <div style={{display:"flex",justifyContent:'start',alignItems:"center"}}><p>{data.title}</p></div>
                     </CardContent>
                 </Card>
                 </Grid>
@@ -47,7 +47,7 @@ export default function SaveExamsPaper2 (props)
         }
     )
     return(
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
             {
                 paper.shown ? <Download title={paper.title} file={paper.qp} onClick={() => closePaperDetails()}/> : card
             }

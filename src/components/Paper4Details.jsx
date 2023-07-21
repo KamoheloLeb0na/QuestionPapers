@@ -1,6 +1,7 @@
 import {Card , CardContent , Grid , Typography , Button , CardMedia} from "@mui/material"
 import data from "../data/lgcsepaper4"
 import { useState } from "react"
+import face from "./pictures/lgcseface.png"
 import Download from "../pages/Download"
 
 export default function SaveExamsPaper2MS (props) 
@@ -35,7 +36,7 @@ export default function SaveExamsPaper2MS (props)
                 <Card onClick={() => showPaperDetails(data.title,data.dir)} sx={{ borderRadius: '10px', maxWidth:"100%"}}>
                     <CardMedia sx={{  position: 'relative' }}>
                         <div style={{display:"flex",justifyContent:'center',alignItems:"center"}}>
-                            <iframe src={data.dir} frameborder="0"></iframe>
+                            <img src={face} alt={data.dir} />
                         </div>
                     </CardMedia>
                     <CardContent>
@@ -47,7 +48,7 @@ export default function SaveExamsPaper2MS (props)
         }
     )
     return(
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
             {
                 paper.shown ? <Download title={paper.title} file={paper.qp} onClick={() => closePaperDetails()}/> : card
             }

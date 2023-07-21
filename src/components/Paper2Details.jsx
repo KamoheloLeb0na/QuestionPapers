@@ -2,7 +2,7 @@ import {Card , CardContent , Grid , Typography , Button , CardMedia} from "@mui/
 import data from "../data/lgcsepaper2"
 import { useState } from "react"
 import Download from "../pages/Download"
-
+import face from "./pictures/lgcseface.png"
 export default function Paper2 (props) 
 {
     const[paper , showPaper] = useState({
@@ -30,11 +30,13 @@ export default function Paper2 (props)
     const card = data.map(
         (data) => {
             return (
+                <>
+                
                 <Grid item xs={6} sm={4} md={3} lg={2}>
                 <Card onClick={() => showPaperDetails(data.title,data.dir)} sx={{ borderRadius: '10px', maxWidth:"100%"}}>
                     <CardMedia >
                         <div style={{display:"flex",justifyContent:'center',alignItems:"center"}}>
-                            <iframe src={data.dir} frameborder="0"></iframe>
+                            <img src={face} alt={data.dir} />
                         </div>
                     </CardMedia>
                     <CardContent>
@@ -42,6 +44,7 @@ export default function Paper2 (props)
                     </CardContent>
                 </Card>
                 </Grid>
+                </>
             )
         }
     )

@@ -2,6 +2,7 @@ import {Card , CardContent , Grid , Typography , Button , CardMedia} from "@mui/
 import data from "../data/notes"
 import Download from "../pages/Download"
 import { useState } from "react"
+import face from "./pictures/savemyexamsface.png"
 
 export default function NotesCard () 
 {
@@ -32,13 +33,15 @@ export default function NotesCard ()
         (data) => {
             return (
                 <Grid item xs={6} sm={4} md={3} lg={2}>
-                <Card onClick={() => showPaperDetails(data.title,data.dir)} sx={{ borderRadius: '10px', maxWidth:"100%"}}>
+                
+                <Card onClick={() => showPaperDetails(data.title,data.dir)} sx={{ borderRadius: '10px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+
                     <CardMedia sx={{  position: 'relative' }}>
                         <div style={{display:"flex",justifyContent:'center',alignItems:"center"}}>
-                            <iframe src={data.dir} frameborder="0"></iframe>
+                            <img src={face} alt={data.title} />
                         </div>
                     </CardMedia>
-                    <CardContent>
+                    <CardContent sx={{backgroundColor:"transparent"}}>
                         <p>{data.title}</p>
                     </CardContent>
                 </Card>
@@ -47,7 +50,7 @@ export default function NotesCard ()
         }
     )
     return(
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
             {
                 paper.shown ? <Download title={paper.title} file={paper.notes} onClick={() => closePaperDetails()}/> : card
             }

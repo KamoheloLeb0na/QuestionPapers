@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
-import { Grid , Button} from "@mui/material";
+import { Button} from "@mui/material";
+import { List,ListItem } from "@mui/material"
+import lgcse from "../components/pictures/lgcseface.png"
 
 export default function Choose(){
     return(
         <div>
-            <Grid container spacing={2}>
-                <Grid item xs={6} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/lgcse2" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><Button sx={{width:"100%"}}>  LGCSE Question Paper2  </Button><br /></Link> </div></Grid>
-                <Grid item xs={6} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/lgcse4" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><Button sx={{width:"100%"}}>  LGCSE Question Paper4 </Button></Link> </div></Grid>
-                <br />
-                <Grid item xs={12} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><Button sx={{border:"solid",borderRadius:"10px",width:"100%"}}>Notes</Button></div></Grid>
-                <br />
-                <Grid item xs={6} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/savemyexamspaper2" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><Button sx={{width:"100%"}}> Save My Exams 2 <br /> </Button></Link> </div></Grid>
-                <Grid item xs={6} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/savemyexamspaper4" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><Button sx={{width:"100%"}}>Save My Exams 4</Button></Link> </div></Grid>
-                <br />
-                <Grid item xs={12} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><Button sx={{border:"solid",borderRadius:"10px",width:"100%"}}>IGCSE Topical Questions</Button></div></Grid>
-                <Grid item xs={6} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/savemyexamspaper2MS" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><Button sx={{width:"100%"}}>Save My Exams Marking Scheme2</Button></Link> </div></Grid>
-                <Grid item xs={6} sm={6} md={3}><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> <Link to="/savemyexamspaper4MS" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><Button sx={{width:"100%"}}>Save My Exams Marking Scheme4</Button></Link> </div></Grid>
-            </Grid>
+            <List>
+                <ListItem><Link to="/lgcse2" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"crimson"}}>  LGCSE Question Paper2's  </h3></Link></ListItem>
+                <ListItem><Link to="/lgcse4" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"crimson"}}>  LGCSE Question Paper4's  </h3></Link></ListItem>
+                <ListItem><Link to="/igcsetopical" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"black"}}>  IGCSE Topical Question Papers </h3></Link></ListItem>
+                <ListItem><Link to="/notes" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"black"}}>  Notes  </h3></Link></ListItem>
+                <ListItem><Link to="/savemyexamspaper2" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"black"}}> SaveMyExams Paper2's  </h3></Link> </ListItem>
+                <ListItem><Link to="/savemyexamspaper4" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"black"}}> SaveMyExams Paper4's  </h3></Link> </ListItem>
+                <ListItem><Link to="/savemyexamspaper2MS" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"black"}}>  SaveMyExams MS paper2  </h3></Link> </ListItem>
+                <ListItem><Link to="/savemyexamspaper4MS" style={{border:"solid",borderRadius:"10px",width:"100%",textDecoration:"none",color:"gray"}}><h3 style={{marginLeft:"5px",color:"black"}}>  SaveMyExams MS paper4  </h3></Link></ListItem>
+            </List>
+
         </div>
     )
 }

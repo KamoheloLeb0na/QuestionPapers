@@ -4,7 +4,7 @@ const product = createSlice({
     name:"product",
     initialState : {
         value : {
-            pdf : ""
+            back : true
         },
     },
     reducers : {

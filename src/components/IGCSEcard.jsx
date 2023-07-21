@@ -1,15 +1,15 @@
 import {Card , CardContent , Grid , Typography , Button , CardMedia} from "@mui/material"
-import data from "../data/saveexams4"
+import data from "../data/igcsetopicalquestions"
 import Download from "../pages/Download"
 import { useState } from "react"
-import face from "./pictures/savemyexamsface.png"
+import face from "./pictures/igcseface.png"
 
-export default function SaveExamsPaper4 (props) 
+export default function IGCSECard () 
 {
     const[paper , showPaper] = useState({
         shown : false,
         title : "",
-        qp : "",
+        notes : "",
     })
     function showPaperDetails(title,dir){
         showPaper(
@@ -17,7 +17,7 @@ export default function SaveExamsPaper4 (props)
                 ...prev,
                 shown:true,
                 title:title,
-                qp:dir
+                notes:dir
             })
         )
     }
@@ -32,14 +32,15 @@ export default function SaveExamsPaper4 (props)
     const card = data.map(
         (data) => {
             return (
-                <Grid item xs={6} sm={4} md={3} lg={2} height={"100%"}>
-                <Card onClick={() => showPaperDetails(data.title,data.questionPaper)} sx={{ borderRadius: '10px',height:"150px"}}>
+                <Grid item xs={6} sm={4} md={3} lg={2}>
+                <Card onClick={() => showPaperDetails(data.title,data.dir)} sx={{ borderRadius: '10px', maxWidth:"100%",height:"160px"}}>
+
                     <CardMedia sx={{  position: 'relative' }}>
-                        <div style={{display:"flex",justifyContent:'center',alignItems:"center",}}>
-                            <img src={face} alt={data.questionPaper} />
+                        <div style={{display:"flex",justifyContent:'center',alignItems:"center"}}>
+                            <img src={face} alt={data.title} />
                         </div>
                     </CardMedia>
-                    <CardContent sx={{height:"60px"}}>
+                    <CardContent sx={{backgroundColor:"transparent"}}>
                         <p>{data.title}</p>
                     </CardContent>
                 </Card>
@@ -50,7 +51,7 @@ export default function SaveExamsPaper4 (props)
     return(
         <Grid container spacing={1}>
             {
-                paper.shown ? <Download title={paper.title} file={paper.qp} onClick={() => closePaperDetails()}/> : card
+                paper.shown ? <Download title={paper.title} file={paper.notes} onClick={() => closePaperDetails()}/> : card
             }
         </Grid>
     )
