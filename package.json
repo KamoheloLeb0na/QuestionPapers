@@ -1,6 +1,6 @@
 {
-  "name": "Math Website",
   "homepage": "http://KamoheloLeb0na.github.io/QuestionPapers",
+  "name": "Math Website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
