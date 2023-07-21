@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/QuestionPapers/static/css/main.a54b2b2a.css",
-    "main.js": "/QuestionPapers/static/js/main.900f3282.js",
+    "main.js": "/QuestionPapers/static/js/main.b039bd2d.js",
     "static/media/graphs.pdf": "/QuestionPapers/static/media/graphs.c5bc381a226ccb8cd442.pdf",
     "static/media/graphsms.pdf": "/QuestionPapers/static/media/graphsms.e58857619d6ecf404abc.pdf",
     "static/media/statisticsms.pdf": "/QuestionPapers/static/media/statisticsms.8d1a36c21599e06af660.pdf",
@@ -56,10 +56,10 @@
     "static/media/lgcseface.png": "/QuestionPapers/static/media/lgcseface.cc6ea5a96ce0ca8f02e8.png",
     "index.html": "/QuestionPapers/index.html",
     "main.a54b2b2a.css.map": "/QuestionPapers/static/css/main.a54b2b2a.css.map",
-    "main.900f3282.js.map": "/QuestionPapers/static/js/main.900f3282.js.map"
+    "main.b039bd2d.js.map": "/QuestionPapers/static/js/main.b039bd2d.js.map"
   },
   "entrypoints": [
     "static/css/main.a54b2b2a.css",
-    "static/js/main.900f3282.js"
+    "static/js/main.b039bd2d.js"
   ]
 }
