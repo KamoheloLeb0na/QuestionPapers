@@ -163,3 +163,32 @@
 [debug] [2023-07-21T21:40:07.630Z] [uploadQueue] Retrying task 5034e13f61d39ca1a85b5701d880b73cf733e15491a9d33aa318ff596b330384
 [debug] [2023-07-21T21:40:07.630Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lgcsemath/versions/e367d659a912d4a0/files/5034e13f61d39ca1a85b5701d880b73cf733e15491a9d33aa318ff596b330384 [none]
 [debug] [2023-07-21T21:40:07.630Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lgcsemath/versions/e367d659a912d4a0/files/5034e13f61d39ca1a85b5701d880b73cf733e15491a9d33aa318ff596b330384 [stream]
+[debug] [2023-07-21T22:04:08.961Z] ----------------------------------------------------------------------
+[debug] [2023-07-21T22:04:08.966Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-07-21T22:04:08.967Z] CLI Version:   12.4.2
+[debug] [2023-07-21T22:04:08.968Z] Platform:      linux
+[debug] [2023-07-21T22:04:08.969Z] Node Version:  v18.13.0
+[debug] [2023-07-21T22:04:08.969Z] Time:          Sat Jul 22 2023 00:04:08 GMT+0200 (South Africa Standard Time)
+[debug] [2023-07-21T22:04:08.970Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-21T22:04:09.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-21T22:04:09.113Z] > authorizing via signed-in user (bobolebona2005@gmail.com)
+[debug] [2023-07-21T22:04:09.113Z] [iam] checking project lgcsemath for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-21T22:04:09.117Z] > refreshing access token with scopes: []
+[debug] [2023-07-21T22:04:09.122Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-21T22:04:09.122Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-21T22:04:19.206Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2023-07-21T22:04:19.208Z] > refreshing access token with scopes: []
+[debug] [2023-07-21T22:04:19.209Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-21T22:04:19.209Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-21T22:04:29.220Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2023-07-21T22:04:34.231Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:254:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
