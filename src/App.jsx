@@ -22,7 +22,7 @@ export default function App(){
       <div style={{margin:"2rem"}}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route index path="/" element={<Home/>}/>
           <Route path="/questionpapermenu" element={<Choose/>}/>
           <Route element={<SaveExamsDisplayPaper2/>} path="savemyexamspaper2"/>
           <Route element={<SaveExamsDisplayPaper4/>} path="savemyexamspaper4"/>
